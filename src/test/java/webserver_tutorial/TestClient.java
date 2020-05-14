@@ -6,7 +6,7 @@ import java.net.Socket;
 
 public class TestClient {
 
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception {
         Socket socket = new Socket("localhost", 8888);
         OutputStream output = socket.getOutputStream();
         output.write("GET /servlet/TimeServlet HTTP/1.1".getBytes());
@@ -16,8 +16,8 @@ public class TestClient {
         byte[] buffer = new byte[2048];
         int length = input.read(buffer);
         StringBuilder response = new StringBuilder();
-        for (int j=0; j<length; j++) {
-            response.append((char)buffer[j]);
+        for (int j = 0; j < length; j++) {
+            response.append((char) buffer[j]);
         }
         System.out.println(response.toString());
         socket.shutdownInput();

@@ -19,10 +19,12 @@ public class ResponseFacade implements ServletResponse {
         response.flushBuffer();
     }
 
+    @Override
     public int getBufferSize() {
         return response.getBufferSize();
     }
 
+    @Override
     public String getCharacterEncoding() {
         return response.getCharacterEncoding();
     }

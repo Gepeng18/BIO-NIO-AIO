@@ -90,7 +90,7 @@ public class ChatServer {
     }
 
     private void forwardMessage(SocketChannel client, String fwdMsg) throws IOException {
-        for (SelectionKey key: selector.keys()) {
+        for (SelectionKey key : selector.keys()) {
             Channel connectedClient = key.channel();
             if (connectedClient instanceof ServerSocketChannel) {
                 continue;
@@ -101,7 +101,7 @@ public class ChatServer {
                 wBuffer.put(charset.encode(getClientName(client) + ":" + fwdMsg));
                 wBuffer.flip();
                 while (wBuffer.hasRemaining()) {
-                    ((SocketChannel)connectedClient).write(wBuffer);
+                    ((SocketChannel) connectedClient).write(wBuffer);
                 }
             }
         }
@@ -109,7 +109,7 @@ public class ChatServer {
 
     private String receive(SocketChannel client) throws IOException {
         rBuffer.clear();
-        while(client.read(rBuffer) > 0);
+        while (client.read(rBuffer) > 0) ;
         rBuffer.flip();
         return String.valueOf(charset.decode(rBuffer));
     }

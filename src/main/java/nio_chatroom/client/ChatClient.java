@@ -118,7 +118,7 @@ public class ChatClient {
 
     private String receive(SocketChannel client) throws IOException {
         rBuffer.clear();
-        while (client.read(rBuffer) > 0);
+        while (client.read(rBuffer) > 0) ;
         rBuffer.flip();
         return String.valueOf(charset.decode(rBuffer));
     }

@@ -1,3 +1,5 @@
+package nio_file_copy;
+
 import java.io.*;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
@@ -13,7 +15,7 @@ public class FileCopyDemo {
 
     private static void benchmark(FileCopyRunner test, File source, File target) {
         long elapsed = 0L;
-        for (int i=0; i<ROUNDS; i++) {
+        for (int i = 0; i < ROUNDS; i++) {
             long startTime = System.currentTimeMillis();
             test.copyFile(source, target);
             elapsed += System.currentTimeMillis() - startTime;
