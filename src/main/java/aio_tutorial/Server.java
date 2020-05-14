@@ -14,7 +14,6 @@ public class Server {
     final String LOCALHOST = "localhost";
     final int DEFAULT_PORT = 8888;
     AsynchronousServerSocketChannel serverChannel;
-
     private void close(Closeable closable) {
         if (closable != null) {
             try {
