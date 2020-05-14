@@ -1,6 +1,6 @@
-package util;
+package webserver_tutorial.util;
 
-import connector.Request;
+import webserver_tutorial.connector.Request;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

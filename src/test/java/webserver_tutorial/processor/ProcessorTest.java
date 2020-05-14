@@ -1,9 +1,9 @@
-package processor;
+package webserver_tutorial.processor;
 
-import connector.Request;
+import webserver_tutorial.connector.Request;
 import org.junit.Assert;
 import org.junit.Test;
-import util.TestUtils;
+import webserver_tutorial.util.TestUtils;
 
 import javax.servlet.Servlet;
 import java.net.MalformedURLException;

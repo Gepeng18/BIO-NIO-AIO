@@ -1,6 +1,6 @@
 package webserver_tutorial;
 
-import connector.Connector;
+import webserver_tutorial.connector.Connector;
 
 public final class Bootstrap {
 

@@ -15,7 +15,7 @@ public class ConnectorUtils {
 
     public static final String SPACE = " ";
 
-    public static String renderStatus(connector.HttpStatus status) {
+    public static String renderStatus(HttpStatus status) {
         StringBuilder sb = new StringBuilder(PROTOCOL)
                 .append(SPACE)
                 .append(status.getStatusCode())

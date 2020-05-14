@@ -1,8 +1,8 @@
-package connector;
+package webserver_tutorial.connector;
 
 import org.junit.Assert;
 import org.junit.Test;
-import util.TestUtils;
+import webserver_tutorial.util.TestUtils;
 
 public class RequestTest {
 

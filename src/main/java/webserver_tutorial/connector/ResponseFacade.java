@@ -8,62 +8,82 @@ import java.util.Locale;
 
 public class ResponseFacade implements ServletResponse {
 
-  private ServletResponse response;
-  public ResponseFacade(Response response) {
-    this.response = response;
-  }
+    private ServletResponse response;
 
-  @Override
-  public void flushBuffer() throws IOException {
-    response.flushBuffer();
-  }
+    public ResponseFacade(Response response) {
+        this.response = response;
+    }
 
-  public int getBufferSize() {
-    return response.getBufferSize();
-  }
+    @Override
+    public void flushBuffer() throws IOException {
+        response.flushBuffer();
+    }
 
-  public String getCharacterEncoding() {
-    return response.getCharacterEncoding();
-  }
+    public int getBufferSize() {
+        return response.getBufferSize();
+    }
 
-  public Locale getLocale() {
-    return response.getLocale();
-  }
+    public String getCharacterEncoding() {
+        return response.getCharacterEncoding();
+    }
 
-  public ServletOutputStream getOutputStream() throws IOException {
-    return response.getOutputStream();
-  }
+    @Override
+    public String getContentType() {
+        return response.getContentType();
+    }
 
-  public PrintWriter getWriter() throws IOException {
-    return response.getWriter();
-  }
+    @Override
+    public Locale getLocale() {
+        return response.getLocale();
+    }
 
-  public boolean isCommitted() {
-    return response.isCommitted();
-  }
+    public ServletOutputStream getOutputStream() throws IOException {
+        return response.getOutputStream();
+    }
 
-  public void reset() {
-    response.reset();
-  }
+    @Override
+    public PrintWriter getWriter() throws IOException {
+        return response.getWriter();
+    }
 
-  public void resetBuffer() {
-    response.resetBuffer();
-  }
+    @Override
+    public void setCharacterEncoding(String s) {
+        response.setCharacterEncoding(s);
+    }
 
-  public void setBufferSize(int size) {
-    response.setBufferSize(size);
-  }
+    @Override
+    public boolean isCommitted() {
+        return response.isCommitted();
+    }
 
-  public void setContentLength(int length) {
-    response.setContentLength(length);
-  }
+    @Override
+    public void reset() {
+        response.reset();
+    }
 
-  public void setContentType(String type) {
-    response.setContentType(type);
-  }
+    @Override
+    public void resetBuffer() {
+        response.resetBuffer();
+    }
 
-  public void setLocale(Locale locale) {
-    response.setLocale(locale);
-  }
+    @Override
+    public void setBufferSize(int size) {
+        response.setBufferSize(size);
+    }
+
+    @Override
+    public void setContentLength(int length) {
+        response.setContentLength(length);
+    }
+
+    @Override
+    public void setContentType(String type) {
+        response.setContentType(type);
+    }
+
+    @Override
+    public void setLocale(Locale locale) {
+        response.setLocale(locale);
+    }
 
 }
